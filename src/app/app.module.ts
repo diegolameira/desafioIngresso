@@ -6,19 +6,19 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './shared/logo/logo.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { HighlightsComponent } from './highlights/highlights.component';
+import { HighlightsModule } from './highlights/highlights.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
-    HeaderComponent,
-    HighlightsComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HighlightsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
