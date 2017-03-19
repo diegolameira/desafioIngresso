@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
+import { HighlightService } from './shared/highlight.service';
 
 @Component({
   selector: 'app-highlights',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HighlightsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public highlightService: HighlightService) { }
 
   ngOnInit() {
   }
