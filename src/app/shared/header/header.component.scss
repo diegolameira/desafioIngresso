@@ -1,0 +1,6 @@
+@import "../../../sass/mixins";
+
+header {
+  @include linearGradient(rgba(0,0,0,1), rgba(0,0,0,0));
+  padding: 40px;
+}
