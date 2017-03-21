@@ -3,6 +3,7 @@
 @import '~normalize.css/normalize.css';
 
 @import "sass/variables";
+@import "sass/mixins";
 
 body {
   font-family: map-get($fonts, roboto);
