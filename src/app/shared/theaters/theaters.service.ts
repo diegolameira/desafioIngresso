@@ -13,14 +13,14 @@ export class TheatersService {
   constructor(private http: Http) {
   }
 
-  getAll(): Observable<Theater[]> {
-    return this.http.get(`${this.theatersUrl}`)
-                    .map(this.extractData)
+  getById(id: number): Observable<Theater> {
+    return this.http.get(`${this.theatersUrl}/${id}`)
+                    .map(res => new Theater(res.json() || {}))
                     .catch(this.handleError);
   }
 
-  getById(id: number): Observable<Theater[]> {
-    return this.http.get(`${this.theatersUrl}/${id}`)
+  getAll(): Observable<Theater[]> {
+    return this.http.get(`${this.theatersUrl}`)
                     .map(this.extractData)
                     .catch(this.handleError);
   }
