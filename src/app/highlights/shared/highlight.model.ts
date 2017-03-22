@@ -9,7 +9,6 @@ export class Highlight {
   }
 
   getTitle() {
-    console.log('foi')
     return this.event.title;
   }
 
