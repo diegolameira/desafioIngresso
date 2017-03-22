@@ -13,7 +13,7 @@ export class HighlightService {
   constructor(private http: Http) {
   }
 
-  getHighlights(cityId: number, theatersIds?: string): Observable<any[]> {
+  getHighlights(cityId: number, theatersIds?: string): Observable<Highlight[]> {
     return this.http.get(`${this.highlightUrl}/${cityId}${theatersIds ? '?theatersIds=' + theatersIds : ''}`)
                     .map(this.extractData)
                     .catch(this.handleError);
