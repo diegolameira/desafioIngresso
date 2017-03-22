@@ -23,7 +23,7 @@ header {
   .events-item {
     box-sizing: border-box;
     padding: 0 0 #{$tracking * 4};
-    width: 18%;
+    width: 46%;
     max-width: 200px;
 
     .poster img {
@@ -31,6 +31,10 @@ header {
       box-shadow: 0 0 $tracking rgba(0,0,0,.8);
     }
 
+    @media (min-width: $medium)
+    {
+      max-width: 18%;
+    }
   }
 
 }
