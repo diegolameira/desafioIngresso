@@ -24,6 +24,22 @@ export class Event {
       Object.assign(this, fields);
     }
   }
+
+  getTitle() {
+    return this.title;
+  }
+
+  getDescription() {
+    return this.synopsis;
+  }
+
+  getPosterPortrait() {
+    return this.images.find(image => image.type == "PosterPortrait").url;
+  }
+
+  getPosterHorizontal() {
+    return this.images.find(image => image.type == "PosterHorizontal").url;
+  }
 }
 
 
