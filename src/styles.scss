@@ -11,6 +11,12 @@ body {
   background-color: map-get($layoutColors, background);
   color: map-get($layoutColors, text);
   font-weight: 300;
+
+  @media (min-width: $medium)
+  {
+    // header spacing
+    padding-top: 130px;
+  }
 }
 
 .title,

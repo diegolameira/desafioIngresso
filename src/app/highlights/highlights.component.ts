@@ -7,10 +7,11 @@ import { HighlightService } from './shared/highlight.service';
 @Component({
   selector: 'app-highlights',
   templateUrl: './highlights.component.html',
-  styleUrls: ['./highlights.component.css']
+  styleUrls: ['./highlights.component.scss']
 })
 export class HighlightsComponent implements OnInit {
   highlights: Highlight[];
+  currentHighlight: Highlight;
 
   constructor(public highlightService: HighlightService) {
   }
@@ -22,7 +23,10 @@ export class HighlightsComponent implements OnInit {
   updateItems(): void {
     this.highlightService.getHighlights(2)
       .subscribe(
-        highlights => this.highlights = highlights,
+        highlights => {
+          this.highlights = highlights;
+          this.currentHighlight = highlights[0];
+        },
         error => this.handleError(error)
       );
   }

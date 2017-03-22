@@ -1,6 +1,29 @@
 export class Highlight {
   event: Event;
   showtimes: ShowTimes;
+
+  constructor( fields?: any ) {
+    if (fields) {
+      Object.assign(this, fields);
+    }
+  }
+
+  getTitle() {
+    console.log('foi')
+    return this.event.title;
+  }
+
+  getDescription() {
+    return this.event.synopsis;
+  }
+
+  getPosterPortrait() {
+    return this.event.images.find(image => image.type == "PosterPortrait").url;
+  }
+
+  getPosterHorizontal() {
+    return this.event.images.find(image => image.type == "PosterHorizontal").url;
+  }
 }
 
 interface Event {

@@ -3,25 +3,32 @@
 
 header {
   @include linearGradient(rgba(0,0,0,1), rgba(0,0,0,0));
-  padding: 40px 40px 80px;
+  padding: #{$tracking * 4};
+  padding-bottom: #{$tracking * 2};
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: $small)
+  @media (min-width: $medium)
   {
+    padding-bottom: #{$tracking * 8};
     flex-direction: row;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 100;
   }
 }
 
 app-logo {
   width: 150px;
-  // alignment
-  margin-top: -18px;
+  // alignment and spacing
+  margin-bottom: 18px;
 
-  @media (min-width: $small)
+  @media (min-width: $medium)
   {
-    margin-right: 40px;
+    margin-right: #{$tracking * 4};
   }
 }
 
@@ -52,7 +59,7 @@ app-logo {
     display: none;
   }
 
-  @media (min-width: $small)
+  @media (min-width: $medium)
   {
     position: static;
     top: auto;

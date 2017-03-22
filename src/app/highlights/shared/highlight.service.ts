@@ -19,8 +19,8 @@ export class HighlightService {
                     .catch(this.handleError);
   }
 
-  private extractData(res: Response): Highlight[] {
-    return res.json() || [];
+  private extractData(res: Response): Array<Highlight> {
+    return res.json().map(item => new Highlight(item)) || [];
   }
 
   private handleError(error: Response | any) {
