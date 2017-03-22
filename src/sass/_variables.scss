@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Roboto:300,600');
+
+$fonts: (
+  lato: ('Lato', sans-serif),
+  roboto: ('Roboto', sans-serif),
+);
+
+$colors: (
+  primary   : #0CB0B1,
+  secondary : #32db64,
+  danger    : #f53d3d,
+  light     : #f4f4f4,
+  dark      : #222
+);
+
+$layoutColors: (
+  title     : #fff,
+  text      : #fff,
+  background: #222,
+);
+
+$tracking: 10px;
+$borderRadius: 3px;
+
+$small: 640px;
+$medium: 1024px;

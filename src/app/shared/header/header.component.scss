@@ -1,0 +1,89 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+header {
+  @include linearGradient(rgba(0,0,0,1), rgba(0,0,0,0));
+  padding: 40px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $small)
+  {
+    flex-direction: row;
+  }
+}
+
+app-logo {
+  width: 150px;
+  // alignment
+  margin-top: -18px;
+
+  @media (min-width: $small)
+  {
+    margin-right: 40px;
+  }
+}
+
+.menu {
+  display: flex;
+
+  button {
+    border: 0;
+    border-radius: $borderRadius;
+    padding: 8px;
+    font-weight: 300;
+  }
+
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: $tracking;
+  border-radius: $borderRadius;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .auth-name {
+    display: none;
+  }
+
+  @media (min-width: $small)
+  {
+    position: static;
+    top: auto;
+    right: auto;
+
+    .auth-name {
+      display: block;
+    }
+  }
+
+  &:hover {
+    color: map-get($colors, primary);
+
+    .avatar {
+      border-color: map-get($colors, primary);
+    }
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-size: cover;
+    margin-left: $tracking;
+    border: 2px solid #FFF;
+
+    img {
+      max-width: 100%;
+      display: none;
+    }
+  }
+
+}

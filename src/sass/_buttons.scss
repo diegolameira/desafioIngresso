@@ -1,0 +1,40 @@
+button {
+    -ms-progress-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    display: block;
+    color: map-get($layoutColors, text);
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 3000px;
+    padding: 14px 20px;
+    margin-right: $tracking;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-color: #fff;
+    }
+
+    @each $name, $val in $colors {
+      &.#{$name} {
+        border-color: $val;
+
+        &:hover {
+          background-color: $val;
+        }
+      }
+    }
+
+    &.filled:hover {
+      color: map-get($layoutColors, background);
+      background-color: map-get($layoutColors, text);
+    }
+}
