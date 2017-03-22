@@ -1,0 +1,37 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 2em 0;
+
+  h2 {
+    margin: 0;
+  }
+
+  button {
+    margin-left: auto;
+  }
+}
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .events-item {
+    box-sizing: border-box;
+    padding: 0 0 #{$tracking * 4};
+    width: 18%;
+    max-width: 200px;
+
+    .poster img {
+      max-width: 100%;
+      box-shadow: 0 0 $tracking rgba(0,0,0,.8);
+    }
+
+  }
+
+}
+

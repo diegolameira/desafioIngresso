@@ -1,0 +1,18 @@
+
+<section class="container">
+  <header>
+    <h2>Eventos</h2>
+    <button class="filled small">Ver todos</button>
+  </header>
+  <div class="events">
+    <div class="events-item" *ngFor="let event of events">
+      <div class="poster">
+        <img src="{{event.getPosterPortrait()}}" alt="{{event.getTitle()}}">
+      </div>
+      <div class="title">
+        {{event.getTitle()}}
+      </div>
+    </div>
+  </div>
+
+</section>
