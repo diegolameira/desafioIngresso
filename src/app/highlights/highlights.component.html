@@ -1,0 +1,21 @@
+<div class="highlight webdoor" *ngIf="currentHighlight">
+  <img [src]="currentHighlight.getPosterHorizontal()" alt="">
+  <div class="highlight-detail">
+    <h1>{{currentHighlight.getTitle()}}</h1>
+    <p>{{currentHighlight.getDescription()}}</p>
+    <div class="actions">
+      <button class="primary">Ver trailer</button>
+    </div>
+  </div>
+</div>
+
+<div class="highlights">
+  <div class="highlights-item" (mouseover)="currentHighlight = highlight" *ngFor="let highlight of highlights">
+    <div class="poster">
+      <img src="{{highlight.getPosterPortrait()}}" alt="{{highlight.getTitle()}}">
+    </div>
+    <div class="title">
+      {{highlight.getTitle()}}
+    </div>
+  </div>
+</div>

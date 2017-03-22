@@ -1,0 +1,67 @@
+@import '../../sass/variables';
+
+.webdoor {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+}
+
+.highlight {
+
+  .highlight-detail {
+    padding: #{$tracking * 2};
+
+    h1 {
+      margin-top: 0;
+    }
+
+    @media (min-width: $medium)
+    {
+      width: 30%;
+      position: absolute;
+      bottom: #{$tracking * 4};
+      right: 0;
+      background-color: rgba(0,0,0,.4);
+      text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+    }
+  }
+}
+
+.highlights {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  padding: 0 #{$tracking * 4} $tracking;
+
+  .highlights-item {
+    padding: 0 $tracking #{$tracking * 4};
+    min-width: 35%;
+
+    .poster img {
+      max-width: 100%;
+      box-shadow: 0 0 $tracking rgba(0,0,0,.8);
+    }
+
+    @media (min-width: $medium)
+    {
+      min-width: auto;
+      width: 25%;
+      max-width: 200px;
+    }
+  }
+
+  @media (max-width: $medium)
+  {
+    overflow-x: scroll;
+  }
+
+  @media (min-width: $medium)
+  {
+    margin-top: -#{$tracking * 2};
+    justify-content: space-around;
+  }
+
+}
