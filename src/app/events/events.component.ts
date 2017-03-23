@@ -11,6 +11,8 @@ import { EventService } from './shared/event.service';
 })
 export class EventsComponent implements OnInit {
   events: Event[];
+  genres: any[];
+  selectedGenre: string = '';
 
   constructor(public eventService: EventService) {
   }
@@ -23,10 +25,26 @@ export class EventsComponent implements OnInit {
     this.eventService.getAllByCity(2)
       .subscribe(
         events => {
-          this.events = events.splice(0, 10);
+
+          const flatten = arr => arr.reduce(
+            (acc, val) => acc.concat(
+              Array.isArray(val) ? flatten(val) : val
+            ),
+            []
+          );
+
+          this.genres = flatten(events.map(item => item.genres)).filter((elem, pos, arr) => {
+            return arr.indexOf(elem) == pos;
+          }).sort();
+
+          this.events = events;
         },
         error => this.handleError(error)
       );
+  }
+
+  onChangeGenre(genre) {
+
   }
 
   handleError(error) {

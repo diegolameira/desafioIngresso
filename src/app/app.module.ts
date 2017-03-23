@@ -11,14 +11,13 @@ import { PremiereModule } from './premiere/premiere.module';
 import { EventsModule } from './events/events.module';
 import { HighlightsModule } from './highlights/highlights.module';
 import { SessionsModule } from './sessions/sessions.module';
-import { GenrePipe } from './shared/genre.pipe';
+import { GenreModule } from './shared/genre/genre.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
-    HeaderComponent,
-    GenrePipe
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +26,8 @@ import { GenrePipe } from './shared/genre.pipe';
     PremiereModule,
     EventsModule,
     SessionsModule,
-    HighlightsModule
+    HighlightsModule,
+    GenreModule
   ],
   providers: [
     TheatersService
