@@ -77,12 +77,29 @@
   padding: 0 #{$tracking * 4} $tracking;
 
   .highlights-item {
+    transition: all ease-in-out .3s;
     padding: 0 $tracking #{$tracking * 4};
     min-width: 35%;
 
     .poster img {
+      border: 2px solid transparent;
+      transition: all ease-in-out .3s;
       max-width: 100%;
-      box-shadow: 0 0 $tracking rgba(0,0,0,.8);
+      box-shadow: 0 0 $tracking rgba(0,0,0,.8), 0 0 0 rgba(#0CB0B1, 0);
+    }
+
+    &.active {
+      transform: scale(1.1);
+
+      .poster img {
+        border: 2px solid #0CB0B1;
+        box-shadow: 5px 10px 200px rgba(0,0,0,.7), 0 0 20px #0CB0B1;
+      }
+    }
+
+    &:not(.active) {
+      -webkit-filter: brightness(50%);
+      filter: brightness(50%);
     }
 
     @media (min-width: $medium)

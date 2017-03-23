@@ -15,7 +15,7 @@
 </div>
 
 <div class="highlights">
-  <div class="highlights-item" (mouseover)="currentHighlight = highlight" *ngFor="let highlight of highlights">
+  <div class="highlights-item" [ngClass]="{active: currentHighlight == highlight}" (mouseover)="currentHighlight = highlight" *ngFor="let highlight of highlights">
     <div class="poster">
       <img src="{{highlight.getPosterPortrait()}}" alt="{{highlight.getTitle()}}">
     </div>
