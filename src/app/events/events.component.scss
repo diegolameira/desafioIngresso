@@ -5,10 +5,28 @@ header {
   display: flex;
   align-items: center;
   padding: 2em 0;
+  flex-wrap: wrap;
 
   h2 {
     margin: 0;
     margin-right: auto;
+  }
+
+  .select-container {
+
+    @media (max-width: #{$medium - 1})
+    {
+      order: 1;
+      width: 100%;
+      margin: 0;
+
+      select {
+        width: 100%;
+        margin: $tracking 0;
+        box-sizing: border-box;
+      }
+    }
+
   }
 
   button {
