@@ -2,8 +2,8 @@
 
 .webdoor {
   position: relative;
-  min-height: 60vh;
-  max-height: 800px;
+  max-height: 470px;
+  min-height: 40vh;
   width: 100%;
 
   .cover {
@@ -34,9 +34,11 @@
 
     img {
       display: block;
+      min-width: 100%;
 
       @media (min-width: $medium)
       {
+        min-width: auto;
         max-width: 100%;
         position: absolute;
         transform: translate(-50%, 0);
