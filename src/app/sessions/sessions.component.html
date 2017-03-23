@@ -3,12 +3,16 @@
 
   <header>
     <h2>Sessões</h2>
-    <select class="filled" [(ngModel)]="selectedTheater" (ngModelChange)="onChangeTheater($event)">
-      <option [ngValue]="theater" *ngFor="let theater of theaters">{{theater.name}}</option>
-    </select>
-    <select class="filled" [(ngModel)]="selectedSession" (ngModelChange)="onChangeSession($event)">
-      <option [ngValue]="session" *ngFor="let session of sessions">{{ session.dayOfWeek }} | {{ session.dateFormatted }}</option>
-    </select>
+    <div class="select-container">
+      <select class="filled" [(ngModel)]="selectedTheater" (ngModelChange)="onChangeTheater($event)">
+        <option [ngValue]="theater" *ngFor="let theater of theaters">{{theater.name}}</option>
+      </select>
+    </div>
+    <div class="select-container">
+      <select class="filled" [(ngModel)]="selectedSession" (ngModelChange)="onChangeSession($event)">
+        <option [ngValue]="session" *ngFor="let session of sessions">{{ session.dayOfWeek }} | {{ session.dateFormatted }}</option>
+      </select>
+    </div>
     <button class="filled small">Ver todos</button>
   </header>
 

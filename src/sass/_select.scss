@@ -1,5 +1,37 @@
+@import './variables';
 @import './buttons';
 
-select {
-  @extend button;
+.select-container {
+  select {
+    @extend button;
+    padding-right: 40px;
+  }
+
+  position: relative;
+
+  margin-right: $tracking;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: map-get($layoutColors, text) transparent transparent transparent;
+  }
+
+  &:hover::after {
+    border-color: map-get($layoutColors, background) transparent transparent transparent;
+  }
+
+
 }
