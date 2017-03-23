@@ -2,13 +2,13 @@
 
 .webdoor {
   position: relative;
-  max-height: 470px;
-  min-height: 40vh;
   width: 100%;
 
   .cover {
     height: 100%;
     overflow: hidden;
+    max-height: 470px;
+    min-height: 40vh;
 
     .background {
       display: none;
