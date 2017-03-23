@@ -2,10 +2,16 @@
 <section class="container">
   <header>
     <h2>Eventos</h2>
+    <div class="select-container">
+      <select class="filled" [(ngModel)]="selectedGenre" (ngModelChange)="onChangeGenre($event)">
+        <option value="">Todos</option>
+        <option [ngValue]="genre" *ngFor="let genre of genres">{{genre}}</option>
+      </select>
+    </div>
     <button class="filled small">Ver todos</button>
   </header>
   <div class="events">
-    <div class="events-item" *ngFor="let event of events">
+    <div class="events-item" *ngFor="let event of events | genre:selectedGenre">
       <div class="poster">
         <img src="{{event.getPosterPortrait()}}" alt="{{event.getTitle()}}">
       </div>

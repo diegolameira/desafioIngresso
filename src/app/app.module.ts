@@ -11,6 +11,7 @@ import { PremiereModule } from './premiere/premiere.module';
 import { EventsModule } from './events/events.module';
 import { HighlightsModule } from './highlights/highlights.module';
 import { SessionsModule } from './sessions/sessions.module';
+import { GenreModule } from './shared/genre/genre.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SessionsModule } from './sessions/sessions.module';
     PremiereModule,
     EventsModule,
     SessionsModule,
-    HighlightsModule
+    HighlightsModule,
+    GenreModule
   ],
   providers: [
     TheatersService
