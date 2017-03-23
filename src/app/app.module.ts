@@ -11,12 +11,14 @@ import { PremiereModule } from './premiere/premiere.module';
 import { EventsModule } from './events/events.module';
 import { HighlightsModule } from './highlights/highlights.module';
 import { SessionsModule } from './sessions/sessions.module';
+import { GenrePipe } from './shared/genre.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
-    HeaderComponent
+    HeaderComponent,
+    GenrePipe
   ],
   imports: [
     BrowserModule,
