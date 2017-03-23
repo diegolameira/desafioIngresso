@@ -8,7 +8,8 @@
     "start": "ng serve --proxy-config proxy.config.json",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build -prod -sm -ec --base-href 'https://diegolameira.github.io/desafioIngresso/gh-pages' && ngh"
   },
   "private": true,
   "dependencies": {

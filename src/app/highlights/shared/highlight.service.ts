@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -8,7 +9,7 @@ import { Highlight } from './highlight.model';
 
 @Injectable()
 export class HighlightService {
-  private highlightUrl = '/api/v1/content/templates/highlights';
+  private highlightUrl = `${environment.api}/v1/content/templates/highlights`;
 
   constructor(private http: Http) {
   }

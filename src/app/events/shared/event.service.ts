@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -8,7 +9,7 @@ import { Event } from './event.model';
 
 @Injectable()
 export class EventService {
-  public apiUrl = '/api/v1/content/events';
+  public apiUrl = `${environment.api}/v1/content/events`;
 
   constructor(public http: Http) {
   }

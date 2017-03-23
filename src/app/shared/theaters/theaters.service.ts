@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -8,7 +9,7 @@ import { Theater } from './theater.model';
 
 @Injectable()
 export class TheatersService {
-  private theatersUrl = '/api/v1/content/theaters';
+  private theatersUrl = `${environment.api}/v1/content/theaters`;
 
   constructor(private http: Http) {
   }
