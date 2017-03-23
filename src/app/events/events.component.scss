@@ -19,11 +19,10 @@ header {
 .events {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   .events-item {
-    box-sizing: border-box;
-    padding: 0 0 #{$tracking * 4};
+    padding: 0 2% #{$tracking * 4};
     width: 46%;
     max-width: 200px;
 
@@ -35,6 +34,7 @@ header {
     @media (min-width: $medium)
     {
       max-width: 18%;
+      padding: 0 1% #{$tracking * 4};
     }
   }
 
