@@ -5,6 +5,7 @@
 @import "sass/variables";
 @import "sass/mixins";
 @import "sass/buttons";
+@import "sass/select";
 
 body {
   font-family: map-get($fonts, roboto);
