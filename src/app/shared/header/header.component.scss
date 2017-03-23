@@ -9,6 +9,12 @@ header {
   flex-direction: column;
   align-items: center;
 
+  // enable pointer events elements below header
+  pointer-events: none;
+  & > * {
+    pointer-events: all;
+  }
+
   @media (min-width: $medium)
   {
     padding-bottom: #{$tracking * 8};

@@ -1,5 +1,10 @@
 <div class="highlight webdoor" *ngIf="currentHighlight">
-  <img [src]="currentHighlight.getPosterHorizontal()" alt="">
+  <div class="cover">
+    <div class="background"
+      [ngStyle]="{'background-image': 'url(' + currentHighlight.getPosterHorizontal() + ')'}"
+      ></div>
+    <img [src]="currentHighlight.getPosterHorizontal()" alt="">
+  </div>
   <div class="highlight-detail">
     <h1>{{currentHighlight.getTitle()}}</h1>
     <p>{{currentHighlight.getDescription()}}</p>
