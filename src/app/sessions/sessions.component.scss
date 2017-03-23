@@ -31,13 +31,16 @@ header {
 
 .movies {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-left: -#{$tracking * 2};
+  margin-right: -#{$tracking * 2};
+  padding: 0 $tracking;
 
-  .sessions-item {
+  .movies-item {
     box-sizing: border-box;
-    padding: 0 0 #{$tracking * 4};
+    padding: $tracking;
     width: 46%;
     max-width: 200px;
 
@@ -49,7 +52,14 @@ header {
     @media (min-width: $medium)
     {
       max-width: 18%;
+      min-width: auto;
     }
+  }
+
+  @media (min-width: $medium)
+  {
+    margin: 0;
+    overflow-x: visible;
   }
 
 }
