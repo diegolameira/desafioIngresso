@@ -10,6 +10,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { PremiereModule } from './premiere/premiere.module';
 import { EventsModule } from './events/events.module';
 import { HighlightsModule } from './highlights/highlights.module';
+import { SessionsModule } from './sessions/sessions.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HighlightsModule } from './highlights/highlights.module';
     HttpModule,
     PremiereModule,
     EventsModule,
+    SessionsModule,
     HighlightsModule
   ],
   providers: [

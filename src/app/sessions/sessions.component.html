@@ -1,0 +1,26 @@
+
+<section class="container">
+
+  <header>
+    <h2>Sessões</h2>
+    <select class="filled" [(ngModel)]="selectedTheater" (ngModelChange)="onChangeTheater($event)">
+      <option [ngValue]="theater" *ngFor="let theater of theaters">{{theater.name}}</option>
+    </select>
+    <select class="filled" [(ngModel)]="selectedSession" (ngModelChange)="onChangeSession($event)">
+      <option [ngValue]="session" *ngFor="let session of sessions">{{ session.dayOfWeek }} | {{ session.dateFormatted }}</option>
+    </select>
+    <button class="filled small">Ver todos</button>
+  </header>
+
+  <div class="movies">
+    <div class="movies-item" *ngFor="let movie of movies">
+      <div class="poster">
+        <img [src]="movie.getPosterPortrait()" alt="{{movie.getTitle()}}">
+      </div>
+      <div class="title">
+        {{movie.getTitle()}}
+      </div>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,55 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 2em 0;
+  flex-wrap: wrap;
+
+  h2 {
+    margin: 0;
+    margin-right: auto;
+  }
+
+  select {
+
+    @media (max-width: #{$medium - 1})
+    {
+      width: 100%;
+      order: 1;
+      margin: $tracking 0;
+      box-sizing: border-box;
+    }
+
+  }
+
+  button {
+    margin-left: auto;
+  }
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .sessions-item {
+    box-sizing: border-box;
+    padding: 0 0 #{$tracking * 4};
+    width: 46%;
+    max-width: 200px;
+
+    .poster img {
+      max-width: 100%;
+      box-shadow: 0 0 $tracking rgba(0,0,0,.8);
+    }
+
+    @media (min-width: $medium)
+    {
+      max-width: 18%;
+    }
+  }
+
+}
