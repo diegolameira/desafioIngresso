@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://crossorigin.me/https://api.ingresso.com',
+  api: 'https://crossorigin.me/https://api-content.ingresso.com',
 };
