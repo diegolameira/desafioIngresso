@@ -9,7 +9,7 @@ import { Event } from './event.model';
 
 @Injectable()
 export class EventService {
-  public apiUrl = `${environment.api}/v1/content/events`;
+  public apiUrl = `${environment.api}/v0/events`;
 
   constructor(public http: Http) {
   }
