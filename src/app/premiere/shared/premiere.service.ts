@@ -10,7 +10,7 @@ import { Event } from '../../events/shared/event.model';
 
 @Injectable()
 export class PremiereService extends EventService {
-  public apiUrl = `${environment.api}/v1/content/templates/premiere`;
+  public apiUrl = `${environment.api}/v0/templates/premiere`;
 
   constructor(public http: Http) {
     super(http);

@@ -9,7 +9,7 @@ import { Theater } from './theater.model';
 
 @Injectable()
 export class TheatersService {
-  private theatersUrl = `${environment.api}/v1/content/theaters`;
+  private theatersUrl = `${environment.api}/v0/theaters`;
 
   constructor(private http: Http) {
   }

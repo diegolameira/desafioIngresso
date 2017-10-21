@@ -9,7 +9,7 @@ import { Highlight } from './highlight.model';
 
 @Injectable()
 export class HighlightService {
-  private highlightUrl = `${environment.api}/v1/content/templates/highlights`;
+  private highlightUrl = `${environment.api}/v0/templates/highlights`;
 
   constructor(private http: Http) {
   }

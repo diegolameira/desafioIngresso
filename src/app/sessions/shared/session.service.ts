@@ -9,7 +9,7 @@ import { Session, SessionListItem } from './session.model';
 
 @Injectable()
 export class SessionService {
-  public apiUrl = `${environment.api}/v1/content/sessions`;
+  public apiUrl = `${environment.api}/v0/sessions`;
 
   constructor(public http: Http) {
   }
